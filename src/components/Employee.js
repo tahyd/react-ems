@@ -6,20 +6,19 @@ export default function Employee() {
 
 
   useEffect(()=>{
-    console.log('x')
+   
 
          fetch('http://localhost:3001/employees')
          .then(response => response.json())
          .then(data=>{
-            // const emplist = data 
-             //console.log(emplist)
+        
              setEmployees(data)
             
 
          })
          console.log(employees)
   
-  },[]);
+  },[employees]);
 
    
   return (
