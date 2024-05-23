@@ -3,6 +3,7 @@ import '../App.css'
 export default function Employee() {
 
   const [employees,setEmployees]= useState([])
+  const [error,setError] = useState(null);
 
 
   useEffect(()=>{
@@ -15,17 +16,19 @@ export default function Employee() {
              setEmployees(data)
             
 
+         }).catch(error=>{
+          setError(error);
          })
          console.log(employees)
   
   },[employees]);
 
    
+  if(error) return <p> Error : {error.message}</p>
   return (
     <div className='employee-list'>Employee
 
-
-         <table border={1}>
+      <table border={1}>
 
 <thead>
            <tr>
