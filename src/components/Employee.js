@@ -34,6 +34,11 @@ export default function Employee() {
            <tr>
             <td>Id</td>
             <td>Name</td>
+            <td>Salary</td>
+            <td>Department ID</td>
+            <td>Department Name</td>
+            <td>Department Location</td>
+
            </tr>
            </thead>
            <tbody>      
@@ -43,6 +48,11 @@ export default function Employee() {
 
                    <td>{employee.id}</td>
                    <td>{employee.name}</td>
+                   <td>{employee.salary}</td>
+                   <td>{employee.department.id}</td>
+                   <td>{employee.department.name}</td>
+                   <td>{employee.department.location}</td>
+
               </tr>
             })
           
